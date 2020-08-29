@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Here is your favourite Movie list.</h2>
+    {%if movielist%}
+    <table>
+        <thead>
+            <th>rdate</th>
+            <th>movieName</th>
+            <th>Hero</th>
+            <th>Heroine</th>
+            <th>Rating</th>
+        </thead>
+        {%for movie in movielist%}
+        <tr>
+            <td>{{movie.rdate}}</td>
+            <td>{{movie.movieName}}</td>
+            <td>{{movie.hero}}</td>
+            <td>{{movie.heroine}}</td>
+            <td>{{movie.rating}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>No movie found</p>
+    {%endif%}
+</body>
+</html>

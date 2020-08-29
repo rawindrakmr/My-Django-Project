@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{%extends 'CRUDapp/base.html'%}
+{%block body_block%}
+<h1>Employee record form</h1>
+<form method="post">
+    <table border="2">
+        {{form}}
+    </table><br>
+    {%csrf_token%}
+    <input type="submit" value="Insert Record" class="btn btn-success btn-lg">
+</form>
+{%endblock%}

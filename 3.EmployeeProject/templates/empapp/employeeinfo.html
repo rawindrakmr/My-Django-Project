@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" align='center'>
+    <h1>Employee Information</h1>
+    {% if emp_list %}
+    <table>
+        <thead>
+            <th>EMP No.</th>
+            <th>EMP Name</th>
+            <th>EMP Salary</th>
+            <th>EMP Address</th>
+        </thead>
+        {%for emp in emp_list%}
+        <tr>
+            <td>{{emp.emp_no}}</td>
+            <td>{{emp.emp_name}}</td>
+            <td>{{emp.emp_salary}}</td>
+            <td>{{emp.emp_address}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>No emp info available</p>
+    {%endif%}
+</body>
+</div>
+</html>

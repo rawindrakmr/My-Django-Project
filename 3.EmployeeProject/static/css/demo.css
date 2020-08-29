@@ -1,0 +1,19 @@
+ .jumbotron{
+    background-color: red;
+    color: white;
+    margin-top: 180px;
+}
+body{
+    background: url('https://images.unsplash.com/photo-1529503260202-4cb2b1677f0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: red;
+    font-size: 50px;
+}
+table, td,th{
+    border: red solid 2px;
+    color: navy;
+    font-size: 20px;
+}
